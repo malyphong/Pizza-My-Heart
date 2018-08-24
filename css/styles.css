@@ -1,0 +1,10 @@
+.form-group {
+  display: none;
+}
+.completedOrder {
+  display: none;
+}
+img {
+  max-width: 100%;
+  max-height: 100%
+}

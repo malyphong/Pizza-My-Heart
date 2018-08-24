@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -10,9 +10,27 @@
   </head>
   <body>
     <div class="container">
-      <h1> A little Pizza your heart</h1>
+      <h1>A little Pizza your heart</h1>
+      <h3>Welcome to Pizza My Heart</h3>
+      <form class="inputInformation">
+        <p>Please enter your name and address for delivery service.</p>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="name">Name:</label>
+            <input type="text" name="name"><br>
+            <label for="address">Your address:</label>
+            <input type="text" name="address"><br>
+            <label for="city">City</label><input type="text" name="city">
+            <label for="name">State</label>
+            <input type="text" name="state"><br>
+            <button type="submit" class="btn btn-primary">Continue</button>
+          </div>
+          <div class="col-md-6">
+            <img src="photo/pizza.jpg" alt="Pizza">
+          </div>
+        </div>
+      </form>
       <form class="form-group">
-        <h3>Welcome to Pizza My Heart</h3>
         <h3>Order Form</h3>
         <div class="row">
           <div class="col-md-4">
@@ -36,7 +54,13 @@
             <label><input type="radio" name="toppings8" value="olives">Black Olives</label><br>
           </div>
         </div>
+        <button type="submit" class="btn btn-primary">Place Order</button>
       </form>
+      <div class="completedOrder">
+        <h2>Order Complete!</h2>
+        <h4>Thank you, <span id="name"></span>!</h4>
+        <p>Your order of a <span id="pizzaSize"></span> pizza will be delivered in 40 minutes</p>
+      </div>
     </div>
   </body>
 </html>
