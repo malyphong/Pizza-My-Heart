@@ -1,3 +1,19 @@
+// Business Logic
+function Purchaser(name, address) {
+  this.name = name;
+  this.address = address;
+}
+
+function Order(size, protein, toppings) {
+this.size = size;
+this.protein = protein;
+this.toppping = toppings;
+}
+
+
+
+
+// User Interface Logic
 $(document).ready(function() {
   $(".inputInformation").submit(function(event) {
     event.preventDefault();
@@ -10,6 +26,6 @@ $(document).ready(function() {
     $(".form-group").hide();
     $(".completedOrder").show();
 
-    
+
   });
 });
