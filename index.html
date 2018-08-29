@@ -17,9 +17,9 @@
         <div class="row">
           <div class="col-md-6">
             <label for="name">Name:</label>
-            <input type="text" name="name"><br>
+            <input type="text" name="name" id="name"><br>
             <label for="address">Your address:</label>
-            <input type="text" name="address"><br>
+            <input type="text" name="address" id="address"><br>
             <label for="city">City</label><input type="text" name="city">
             <label for="name">State</label>
             <input type="text" name="state"><br>
@@ -58,8 +58,9 @@
       </form>
       <div class="completedOrder">
         <h2>Order Complete!</h2>
-        <h4>Thank you, <span id="name"></span>!</h4>
+        <h4>Thank you, <span id="purchaserName"></span>!</h4>
         <p class="finishedOrder"></p>
+        <p>Your pizza will be delivered to <span id="purchaserAddress"></span> in 35 minutes.</p>
       </div>
     </div>
   </body>
