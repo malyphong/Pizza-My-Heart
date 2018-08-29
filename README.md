@@ -11,10 +11,10 @@ _User will be able to input their name and address information for delivery. Als
 ## Specs
 
 Input fields to store purchaser name and address
-* _Input:_ Edward Scissorhands
-            123 Alphabet Lane
-* _Output:_ Edward Scissorhands
-            123 Alphabet Lane
+* _Input:  Edward Scissorhands_
+  *          _123 Alphabet Lane_
+* _Output:  Edward Scissorhands_
+  *          _123 Alphabet Lane_
 
 Program has a set base price of $3 for pizza sizes until form is submitted
 * _Input:_ ☑︎Small / ☑︎Medium / ☑︎Large
@@ -28,14 +28,14 @@ Pricing will be changed on certain size selection with the addition of the base 
 
 ## Setup Requirements
 
-* _Clone (Pizza-My-Heart)[https://github.com/malyphong/Pizza-My-Heart.git]_
+* _Clone [Pizza-My-Heart](https://github.com/malyphong/Pizza-My-Heart.git)_
 * _Download jQuery-3.3.1.js_
 * _Download Bootstrap_
 
 
 ## Contact details
 
-_For any question related to Pizza-My-Heart please email (Maly Phongsavanh)[phongsavanh619@icloud.com]_
+_For any question related to Pizza-My-Heart please email [Maly Phongsavanh](phongsavanh619@icloud.com)_
 
 ### License
 
