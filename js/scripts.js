@@ -4,20 +4,23 @@ function Purchaser(name, address) {
   this.address = address;
 
 }
-function Order(size, protein, toppings) {
+function Order(size, protein, toppings, price) {
   this.size = size;
   this.protein = protein;
   this.toppings = toppings;
+  this.price = price;
 }
 
-Order.prototype.Sizes = function() {
+Order.prototype.sizePrice = function(size) {
+  var pizzaPrice = 3;
   if (this.size === "small") {
-    this.pizza = 5
+    this.price = pizzaPrice += 5;
   } else if (this.size === "medium") {
-    this.pizza = 10
+    this.price = pizzaPrice += 10;
   } else if (this.size === "large") {
-    this.pizza = 13
+    this.price = pizzaPrice += 13;
   }
+  return this.price;
 }
 
 // User Interface Logic
@@ -26,20 +29,24 @@ $(document).ready(function() {
     event.preventDefault();
     $(".inputInformation").hide();
     $(".form-group").show();
+
     var name = $("input.name");
     var address = $("input.address");
+
   });
   $(".form-group").submit(function(event) {
     event.preventDefault();
     $(".form-group").hide();
     $(".completedOrder").show();
 
-    var size = $("input[name=size]").val();
-    var protein = $("input[name=protein]").val();
+    var size = $("input[name=size]:checked").val();
+    var protein = $("input[name=protein]:checked").val();
     var toppings = [];
-    $("input:checkbox[name=toppings]:checked").map(function() {
+    $("input[name=toppings]:checked").map(function() {
       toppings.push($(this).val());
-      console.log(size, protein, toppings);
+      var newOrder = new Order (size, protein, toppings);
+      console.log(newOrder);
+
     })
   });
 });
