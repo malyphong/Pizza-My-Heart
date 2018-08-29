@@ -11,10 +11,10 @@ _User will be able to input their name and address information for delivery. Als
 ## Specs
 
 Input fields to store purchaser name and address
-* _Input:  Edward Scissorhands_
-  *          _123 Alphabet Lane_
-* _Output:  Edward Scissorhands_
-  *          _123 Alphabet Lane_
+* _Input:_  Edward Scissorhands
+*          123 Alphabet Lane
+* _Output:_  Edward Scissorhands
+*          123 Alphabet Lane
 
 Program has a set base price of $3 for pizza sizes until form is submitted
 * _Input:_ ☑︎Small / ☑︎Medium / ☑︎Large
