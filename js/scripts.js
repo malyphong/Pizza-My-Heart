@@ -6,16 +6,18 @@ function Order(size, protein, toppings, price) {
   this.price = 3;
 }
 
-Order.prototype.sizePrice = function(size) {
-  if (this.size === "small" && this.toppings >= 2) {
-    this.price += 5;
+Order.prototype.sizePrice = function() {
+  if (this.size === "small") {
+    return this.price += 5;
   } else if (this.size === "medium") {
-    this.price += 10;
+    return this.price += 10;
   } else if (this.size === "large") {
-    this.price += 13;
-  } else {
-  return this.price;
+    return this.price += 13;
   }
+}
+
+Order.prototype.orderList = function() {
+  return "Selection of protein is " + this.protein + " and toppings selection is/are " + this.toppings;
 }
 
 
@@ -45,11 +47,14 @@ $(document).ready(function() {
     $("input[name=toppings]:checked").map(function() {
       toppings.push($(this).val());
       var newOrder = new Order(size, protein, toppings);
-      console.log(newOrder);
 
-      var pizzaOrdered = newOrder.sizePrice(size, toppings);
+      var pizzaOrdered = newOrder.sizePrice();
+      console.log(pizzaOrdered);
 
-      $(".wholePizza").text(pizzaOrdered);
+      var toppingsList = newOrder.orderList();
+
+      $("#sizingprice").text(pizzaOrdered);
+      $("p#ingredients").text(toppingsList);
 
 
     })
