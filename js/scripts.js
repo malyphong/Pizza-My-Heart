@@ -17,6 +17,8 @@ Order.prototype.sizePrice = function(size) {
   return this.price;
   }
 }
+
+
 // User Interface Logic
 $(document).ready(function() {
   $(".inputInformation").submit(function(event) {
@@ -39,14 +41,15 @@ $(document).ready(function() {
 
     var size = $("input[name=size]:checked").val();
     var protein = $("input[name=protein]:checked").val();
-    var price = 3;
     var toppings = [];
     $("input[name=toppings]:checked").map(function() {
       toppings.push($(this).val());
-      var newOrder = new Order(size, protein, toppings, price);
+      var newOrder = new Order(size, protein, toppings);
       console.log(newOrder);
 
-      $(".finishOrder").append(newOrder)
+      var pizzaOrdered = newOrder.sizePrice(size, toppings);
+
+      $(".wholePizza").text(pizzaOrdered);
 
 
     })
